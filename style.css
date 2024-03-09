@@ -1,0 +1,109 @@
+@font-face {
+    font-family: Akira;
+    src: url(./assets/font/Akira.otf);
+}
+
+html {
+    color: #F0F8FFFF;
+
+    height: 100%;
+    width: 100%;
+    background-color: #0D0F0E;
+
+    margin: 0;
+    font-family: Akira;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hero {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-image: url("./assets/img_2_blur_10.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    a {
+        text-decoration: none;
+        color: #F0F8FFFF;
+        text-shadow: 2px 2px 4px #000;
+    }
+
+    nav {
+        flex: 1;
+        ul {
+            margin-left: 40px;
+            margin-right: 40px;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            border-bottom: 1px solid #f0f8ff;
+            border-top: 1px solid #f0f8ff;
+            background-color: rgba(0, 0, 0, 0.38);
+
+            li {
+                margin: 0 5px 5px 5px;
+                border: 1px;
+                border-radius: 0 0 25px 25px;
+
+            }
+        }
+    }
+
+    .hero-text {
+        flex: 8;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        border-bottom: 1px solid #f0f8ff;
+        border-top: 1px solid #f0f8ff;
+        background-color: rgba(0, 0, 0, 0.38);
+        margin: 20px 40px;
+
+    }
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    height: 55px;
+    width: 140px;
+    position: relative;
+}
+
+.btn-effect::before {
+    content: "";
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    background: white;
+    bottom: 8px;
+    transition: width 300ms ease-in;
+}
+
+.btn-effect:hover:before {
+    width: 100%;
+}
